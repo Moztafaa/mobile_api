@@ -1,8 +1,4 @@
 ---
-# Node Blog API
-
-Node Blog API is the server-side component of a blog project built with TypeScript, Express.js, and MongoDB. It provides a robust API for managing users, posts, categories, and comments, allowing you to build a fully functional blog application.
-
 ## Installation
 
 Follow these steps to get the Node Blog API up and running on your local machine:
@@ -10,7 +6,7 @@ Follow these steps to get the Node Blog API up and running on your local machine
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/Moztafaa/node-blog-api.git
+   git clone https://github.com/Moztafaa/mobile_api.git
    ```
 
 2. Install the project dependencies using npm:
@@ -56,7 +52,7 @@ This project includes a Postman collection that can be used to test the API endp
 
 To use the Node Blog API, follow these steps:
 
-1. Open your web browser and navigate to `http://localhost:8000`.
+1. Open your web browser and navigate to `http://localhost:4000`.
 
 2. Use the following API endpoints to interact with the project:
 
@@ -68,20 +64,6 @@ To use the Node Blog API, follow these steps:
    - `PUT /api/users/profile/:id`: Updates a user by ID.
    - `DELETE /api/users/profile/:id`: Deletes a user by ID.
    - `POST /api/users/profile/profile-photo-upload`: Upload profile photo.
-   - `GET /api/posts`: Returns a list of all posts.
-   - `GET /api/posts/count`: Returns the count of all posts.
-   - `GET /api/posts/:id`: Returns a single post by ID.
-   - `POST /api/posts`: Creates a new post.
-   - `PUT /api/posts/:id`: Updates a post by ID.
-   - `PUT /api/posts/like/:id`: Toggle like for the post.
-   - `DELETE /api/posts/:id`: Deletes a post by ID.
-   - `GET /api/categories`: Returns a list of all categories.
-   - `POST /api/categories`: Creates a new category.
-   - `DELETE /api/categories/:id`: Deletes a category by ID.
-   - `GET /api/comments`: Returns a list of all comments.
-   - `POST /api/comments`: Creates a new comment.
-   - `PUT /api/comments/:id`: Updates a comment by ID.
-   - `DELETE /api/comments/:id`: Deletes a comment by ID.
 
 ## License
 
