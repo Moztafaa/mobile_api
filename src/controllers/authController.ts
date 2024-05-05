@@ -26,6 +26,8 @@ export const registerUserCtrl = asyncHandler(
       username: req.body.username,
       email: req.body.email,
       password: hashedPassword,
+      gender: req.body.gender,
+      level: req.body.level,
     });
     await user.save();
 

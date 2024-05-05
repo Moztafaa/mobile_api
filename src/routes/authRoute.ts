@@ -1,14 +1,12 @@
-import express from 'express'
+import express from "express";
 
-import {loginUserCtrl, registerUserCtrl} from '../controllers/authController'
+import { loginUserCtrl, registerUserCtrl } from "../controllers/authController";
 
-const router = express.Router()
+const router = express.Router();
 // /api/auth/register
-router.post('/register', registerUserCtrl)
+router.post("/register", registerUserCtrl);
 
 // /api/auth/login
-router.post('/login', loginUserCtrl)
+router.post("/login", loginUserCtrl);
 
-export {
-	router as authRouter
-}
+export { router as authRouter };

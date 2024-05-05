@@ -82,7 +82,7 @@ export function validateRegisterUser(obj) {
     email: Joi.string().trim().min(5).max(100).required().email(),
     password: passwordComplexity().required(),
     gender: Joi.string().trim(),
-    level: Joi.number().integer().max(4),
+    level: Joi.number().integer().min(1).max(4),
   });
   return schema.validate(obj);
 }
@@ -103,7 +103,7 @@ export function validateUpdateUser(obj) {
     password: passwordComplexity(),
     email: Joi.string().trim().min(5).max(100).email(),
     gender: Joi.string().trim(),
-    level: Joi.number().integer(),
+    level: Joi.number().integer().min(1).max(4),
   });
   return schema.validate(obj);
 }

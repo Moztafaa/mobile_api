@@ -1,4 +1,4 @@
-import Router from 'express'
+import Router from "express";
 import {
   deleteUserProfileCtrl,
   getAllUserCtrl,
@@ -6,45 +6,45 @@ import {
   getUsersCount,
   profilePhotoUploadCtrl,
   updateUserProfileCtrl,
-} from '../controllers/userController'
-import { photoUpload } from '../middleware/photoUpload'
-import validateObjectId from '../middleware/validateObjectId'
+} from "../controllers/userController";
+import { photoUpload } from "../middleware/photoUpload";
+import validateObjectId from "../middleware/validateObjectId";
 import {
   verifyToken,
   verifyTokenAndAdmin,
   verifyTokenAndAuthorization,
   verifyTokenAndOnlyUser,
-} from '../middleware/verifyToken'
+} from "../middleware/verifyToken";
 
-const router = Router()
+const router = Router();
 
 // /api/users/profile
-router.get('/profile', verifyTokenAndAdmin, getAllUserCtrl)
+router.get("/profile", verifyTokenAndAdmin, getAllUserCtrl);
 
 // /api/users/profile/:id
-router.get('/profile/:id', validateObjectId, getUserProfileCtrl)
+router.get("/profile/:id", validateObjectId, getUserProfileCtrl);
 router.put(
-  '/profile/:id',
+  "/profile/:id",
   validateObjectId,
   verifyTokenAndOnlyUser,
   updateUserProfileCtrl
-)
+);
 router.delete(
-  '/profile/:id',
+  "/profile/:id",
   validateObjectId,
   verifyTokenAndAuthorization,
   deleteUserProfileCtrl
-)
+);
 
 // /api/users/profile/profile-photo-upload
 router.post(
-  '/profile/profile-photo-upload',
+  "/profile/profile-photo-upload",
   verifyToken,
-  photoUpload.single('image'),
+  photoUpload.single("image"),
   profilePhotoUploadCtrl
-)
+);
 
 // /api/users/count
-router.get('/count', verifyTokenAndAdmin, getUsersCount)
+router.get("/count", verifyTokenAndAdmin, getUsersCount);
 
-export { router as userRouter }
+export { router as userRouter };

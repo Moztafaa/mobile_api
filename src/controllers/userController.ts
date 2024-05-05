@@ -18,7 +18,7 @@ import {
 export const getAllUserCtrl = asyncHandler(
   async (req: Request, res: Response): Promise<any> => {
     // @ts-ignore
-    const users = await User.find().select("-password").populate("posts");
+    const users = await User.find().select("-password");
     res.status(200).json(users);
   }
 );
@@ -30,9 +30,7 @@ export const getAllUserCtrl = asyncHandler(
 export const getUserProfileCtrl = asyncHandler(
   async (req: Request, res: Response): Promise<any> => {
     // @ts-ignore
-    const user = await User.findById(req.params.id)
-      .select("-password")
-      .populate("posts");
+    const user = await User.findById(req.params.id).select("-password");
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
@@ -60,7 +58,6 @@ export const updateUserProfileCtrl = asyncHandler(
         $set: {
           username: req.body.username,
           password: req.body.password,
-          bio: req.body.bio,
         },
       },
       { new: true }
