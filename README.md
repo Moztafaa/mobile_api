@@ -1,6 +1,6 @@
 ## Installation
 
-Follow these steps to get the Node Blog API up and running on your local machine:
+Follow these steps to get the Mobile API up and running on your local machine:
 
 1. Clone the repository to your local machine:
 
