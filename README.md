@@ -1,4 +1,3 @@
----
 ## Installation
 
 Follow these steps to get the Node Blog API up and running on your local machine:
