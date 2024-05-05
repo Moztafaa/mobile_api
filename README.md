@@ -11,7 +11,7 @@ Follow these steps to get the Node Blog API up and running on your local machine
 2. Install the project dependencies using npm:
 
    ```bash
-   cd node-blog-api
+   cd mobile_api
    npm install
    ```
 
@@ -35,10 +35,6 @@ Follow these steps to get the Node Blog API up and running on your local machine
 
 ## Deployment
 
-The Node Blog API is deployed on Render at the following URL:
-
-https://node-blog-api-ihsp.onrender.com
-
 You can use this URL to access the API and test its functionality.
 
 ## API Documentation
@@ -49,7 +45,7 @@ This project includes a Postman collection that can be used to test the API endp
 
 ## Usage
 
-To use the Node Blog API, follow these steps:
+To use the mobile API, follow these steps:
 
 1. Open your web browser and navigate to `http://localhost:4000`.
 
