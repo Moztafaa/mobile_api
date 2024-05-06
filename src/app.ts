@@ -6,6 +6,7 @@ import db from "./config/connectToDb";
 import { errorHandler, notFound } from "./middleware/error";
 import { authRouter } from "./routes/authRoute";
 import { userRouter } from "./routes/userRoute";
+import { restaurantRouter } from "./routes/restaurantRoute";
 
 dotenv.config();
 //connect to db
@@ -23,7 +24,7 @@ app.use(cors());
 //routes
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
-
+app.use("/api/restaurants", restaurantRouter);
 // Not Found Middleware
 app.use(notFound);
 
