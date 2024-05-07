@@ -3,6 +3,7 @@ import {
   createRestaurantCtrl,
   getAllRestaurantCtrl,
   getRestaurantByIdCtrl,
+  getRestaurantProductsCtrl,
 } from "../controllers/restaurantController";
 import validateObjectId from "../middleware/validateObjectId";
 const router = Router();
@@ -21,7 +22,9 @@ router.post("/create", createRestaurantCtrl);
 router.get("/all", getAllRestaurantCtrl);
 
 // get restaurant by id
-
 router.get("/:id", validateObjectId, getRestaurantByIdCtrl);
+
+// get restaurant products by id
+router.get("/:id/products", validateObjectId, getRestaurantProductsCtrl);
 
 export { router as restaurantRouter };

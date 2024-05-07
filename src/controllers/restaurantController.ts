@@ -43,4 +43,16 @@ export const getRestaurantByIdCtrl = asyncHandler(
   }
 );
 
+// get restaurant's products by id
+export const getRestaurantProductsCtrl = asyncHandler(
+  async (req: Request, res: Response): Promise<any> => {
+    const restaurant = await Restaurant.findById(req.params.id).populate(
+      "products"
+    );
+    if (!restaurant) {
+      return res.status(404).json({ message: "restaurant not found" });
+    }
+    res.status(200).json(restaurant.products);
+  }
+);
 
